@@ -1,6 +1,6 @@
 ## spring-webfux-mongo-bug-demo
 
-This project reproduces bug described in [issue]() and [stackoverflow](). 
+This project reproduces bug described in [issue](https://github.com/spring-projects/spring-data-mongodb/issues/4095) and [stackoverflow](https://stackoverflow.com/questions/72742152/spring-data-mongodb-reactive-stop-producing-data-to-rest-controller). 
 
 In a nutshell, spring data's method returning `Flux` and passed to a controller stops producing data after some period of time.
 
