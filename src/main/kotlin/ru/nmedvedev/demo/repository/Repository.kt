@@ -14,5 +14,3 @@ data class DatabaseRecord(
 
 interface Repository : ReactiveMongoRepository<DatabaseRecord, ObjectId>
 
-
-

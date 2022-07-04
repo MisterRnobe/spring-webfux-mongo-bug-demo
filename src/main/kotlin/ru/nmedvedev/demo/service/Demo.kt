@@ -17,6 +17,7 @@ import kotlin.random.Random
 private const val DATA_COUNT = 1_000_000
 private const val FILL_BATCH = 1_000
 private const val PRINT_FETCHED_EVERY = 10_000
+private const val ENDPOINT = "/v2/data"
 
 private val log = KotlinLogging.logger { }
 
@@ -88,7 +89,7 @@ class Demo(
 
 private fun WebClient.getData(): Flux<DatabaseRecord> =
     this.get()
-        .uri("http://localhost:8080/data")
+        .uri("http://localhost:8080${ENDPOINT}")
         .accept(MediaType.APPLICATION_NDJSON)
         .retrieve()
         .bodyToFlux()
